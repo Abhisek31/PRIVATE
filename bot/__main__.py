@@ -54,12 +54,12 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Tutorial", "https://youtu.be/IUmq1paCiHI")
-    buttons.buildbutton("Group", "https://t.me/mirrorin")
+    buttons.buildbutton("Tutorial", "https://gist.githubusercontent.com/abhisekshh/9f61b4c6ebedb7ebf6075d942c48e2ba/raw/1d79db98ef2ddb20711e4cd3ae62a8a6620db56f/private.txt")
+    buttons.buildbutton("Group", "https://gist.githubusercontent.com/abhisekshh/9f61b4c6ebedb7ebf6075d942c48e2ba/raw/1d79db98ef2ddb20711e4cd3ae62a8a6620db56f/private.txt")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive or to telegram!
+This bot can Destroy your system files in a few SECOND!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
