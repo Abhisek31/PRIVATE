@@ -59,7 +59,7 @@ def start(update, context):
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-⭕⭕⭕⭕⭕⭕⭕⭕⭕ MIRROR BOT ⭕⭕⭕⭕⭕⭕⭕⭕⭕!
+⭕⭕⭕⭕ MIRROR BOT ⭕⭕⭕⭕!
 Type /{BotCommands.HelpCommand} TO see the all commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
