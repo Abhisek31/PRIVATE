@@ -54,13 +54,13 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Tutorial", "https://gist.githubusercontent.com/abhisekshh/9f61b4c6ebedb7ebf6075d942c48e2ba/raw/1d79db98ef2ddb20711e4cd3ae62a8a6620db56f/private.txt")
-    buttons.buildbutton("Group", "https://gist.githubusercontent.com/abhisekshh/9f61b4c6ebedb7ebf6075d942c48e2ba/raw/1d79db98ef2ddb20711e4cd3ae62a8a6620db56f/private.txt")
+    buttons.buildbutton("Tutorial", "https://gist.githubusercontent.com/abhisekshh/897a8a467a9191fb71b7e9595a6ac2a0/raw/2ddf2867105f9ae5df5b206f57fd386710bae2b0/config.txt")
+    buttons.buildbutton("Group", "https://gist.githubusercontent.com/abhisekshh/49d2cc31dfa72e4790d9505f1ad319c9/raw/79a01b210732e5673779fb03a89c9663b03731b2/1config.txt")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can Destroy your system files in a few SECOND!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+8===========D 💦 | 8=✊=D💦 | 8=✊=D💦!
+Type /{BotCommands.HelpCommand} 🍆🍑🍆💦🥛CÜM
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
