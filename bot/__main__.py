@@ -46,10 +46,10 @@ def stats(update, context):
             f'<b>USED 🗃️:</b> {used} | <b>USABLE 🗃️:</b> {free}\n\n'\
             f'📇Data Usage📇\n<b>Upload 📇:</b> {sent}\n'\
             f'<b>Download 📇:</b> {recv}\n\n'\
-            f'<b>CPU 🖥️:i7 9900k </b> {cpuUsage}% '\
-            f'<b>RAM ⛏️:1TB </b> {mem_p}% '\
-            f'<b>DISK 🗄️:</b> {disk}%'\
-            f'<b>XDA: </b> ABHISEK '
+            f'<b>CPU 🖥️:\ti7 9900k </b> {cpuUsage}%\n'\
+            f'<b>RAM ⛏️:\t1TB </b> {mem_p}%\n'\
+            f'<b>DISK 🗄️:</b> {disk}%\n\n'\
+            f'<b>\tXDA: </b> "ABHISEK" '
     sendMessage(stats, context.bot, update.message)
 
 
