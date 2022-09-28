@@ -46,10 +46,11 @@ def stats(update, context):
             f'<b>USED 🗃️:</b> {used} | <b>USABLE 🗃️:</b> {free}\n\n'\
             f'📇Data Usage📇\n<b>Upload 📇:</b> {sent}\n'\
             f'<b>Download 📇:</b> {recv}\n\n'\
-            f'<b>CPU 🖥️:\ti7 9900k </b> {cpuUsage}%\n'\
+            f'<b>POWERED BY </b>INTEL i9 12TH GEN \n\n'\
+            f'<b>CPU 🖥️:\ti9-12900KS </b> {cpuUsage}%\n'\
             f'<b>RAM ⛏️:\t1TB </b>🔁 {mem_p}%\n'\
             f'<b>VOLUME 🗄️:</b> {disk}%\n\n'\
-            f'<b>\t👑👑👑: </b>\t\t 👑ABHISEK👑 '
+            f'<b>\t     : </b>\t\t👑ABHISEK👑 '
     sendMessage(stats, context.bot, update.message)
 
 
@@ -65,10 +66,10 @@ Type /{BotCommands.HelpCommand} TO see the all commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not an Authorized user!', context.bot, update.message, reply_markup)
+        sendMarkup('Not an Authorized user!\nFUCK OFF\nNIGGA', context.bot, update.message, reply_markup)
 
 def restart(update, context):
-    restart_message = sendMessage("Restarting...", context.bot, update.message)
+    restart_message = sendMessage("Restarting...\nWait Few Sec..", context.bot, update.message)
     if Interval:
         Interval[0].cancel()
         Interval.clear()
