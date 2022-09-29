@@ -20,16 +20,16 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading⏫"
-    STATUS_DOWNLOADING = "Downloading⏬"
-    STATUS_CLONING = "Cloning🖨️"
+    STATUS_UPLOADING = "EXPORTING🔺"
+    STATUS_DOWNLOADING = "IMPORTING🔻"
+    STATUS_CLONING = "REDUPLICATEING🖨️"
     STATUS_WAITING = "Queued📝"
     STATUS_PAUSED = "Paused⏸️"
     STATUS_ARCHIVING = "Archiving🔐"
-    STATUS_EXTRACTING = "Extracting📂"
-    STATUS_SPLITTING = "Splitting✂️"
-    STATUS_CHECKING = "CheckingUp🩺"
-    STATUS_SEEDING = "Seeding🌱"
+    STATUS_EXTRACTING = "ABSTRACTING📂"
+    STATUS_SPLITTING = "DRAWING OUT✂️"
+    STATUS_CHECKING = "CHECKING HEALTH🩺"
+    STATUS_SEEDING = "PLANTING🌱"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
