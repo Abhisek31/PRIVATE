@@ -20,8 +20,8 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "EXPORTING🔺"
-    STATUS_DOWNLOADING = "IMPORTING🔻"
+    STATUS_UPLOADING = "EXPORTING〘🔺〙"
+    STATUS_DOWNLOADING = "IMPORTING〘🔻〙"
     STATUS_CLONING = "REDUPLICATEING🖨️"
     STATUS_WAITING = "Queued📝"
     STATUS_PAUSED = "Paused⏸️"
@@ -29,7 +29,7 @@ class MirrorStatus:
     STATUS_EXTRACTING = "ABSTRACTING📂"
     STATUS_SPLITTING = "DRAWING OUT✂️"
     STATUS_CHECKING = "CHECKING HEALTH🩺"
-    STATUS_SEEDING = "PLANTING🌱"
+    STATUS_SEEDING = "PLANTING🌿"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -127,7 +127,7 @@ def get_readable_message():
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
                 msg += f"\n{get_progress_bar_string(download)} {download.progress()}"
                 msg += f"\n<b>Processed:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                msg += f"\n<b>Speed ⚡️:</b> {download.speed()} | <b>ETA:</b> {download.eta()}"
+                msg += f"\n<b>Speed ⚡🚀:</b> {download.speed()} | <b>ETA:</b> {download.eta()}"
                 if hasattr(download, 'seeders_num'):
                     try:
                         msg += f"\n<b>Seeders ⚓️:</b> {download.seeders_num()} | <b>Leechers:</b> {download.leechers_num()}"
@@ -135,13 +135,13 @@ def get_readable_message():
                         pass
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>Size: </b>{download.size()}"
-                msg += f"\n<b>Speed ⚡️: </b>{download.upload_speed()}"
+                msg += f"\n<b>Speed ⚡️🚀: </b>{download.upload_speed()}"
                 msg += f" | <b>Uploaded: </b>{download.uploaded_bytes()}"
                 msg += f"\n<b>Ratio: </b>{download.ratio()}"
                 msg += f" | <b>Time ⏳: </b>{download.seeding_time()}"
             else:
                 msg += f"\n<b>Size: </b>{download.size()}"
-            msg += f"\n<b>Stop 👉:</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+            msg += f"\n<b>Stop ☣️:</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
@@ -170,7 +170,7 @@ def get_readable_message():
                     up_speed += float(spd.split('M')[0]) * 1048576
         bmsg = f"<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
         bmsg += f"\n<b>RAM:</b> {virtual_memory().percent}% | <b>UPTIME:</b> {get_readable_time(time() - botStartTime)}"
-        bmsg += f"\n🔻<b>DL:</b> {get_readable_file_size(dl_speed)}/s | 🔺<b>UL:</b> {get_readable_file_size(up_speed)}/s"
+        bmsg += f"\n📶<b>DL:</b> {get_readable_file_size(dl_speed)}/s | 📶<b>UL:</b> {get_readable_file_size(up_speed)}/s"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
